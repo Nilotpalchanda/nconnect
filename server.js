@@ -1,5 +1,5 @@
 
-var IP =  process.env.OPENSHIFT_NODEJS_IP,
+var IP =  process.env.OPENSHIFT_NODEJS_IP;
 var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var express = require('express');
 var moment = require('moment');
