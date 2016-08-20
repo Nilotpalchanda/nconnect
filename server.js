@@ -1,4 +1,6 @@
-var PORT = process.env.PORT || 3000;
+
+var IP =  process.env.OPENSHIFT_NODEJS_IP,
+var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var express = require('express');
 var moment = require('moment');
 var app=express();
@@ -65,7 +67,7 @@ socket.on('joinRoom',function(req){
     });
   });
 
-http.listen(PORT, function(){
+http.listen(PORT,IP, function(){
 
 console.log('Server started!');
 
